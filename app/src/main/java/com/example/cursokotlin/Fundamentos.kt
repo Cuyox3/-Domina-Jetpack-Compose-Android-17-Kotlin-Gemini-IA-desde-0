@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     print("Cursos ANT")
 
@@ -29,3 +31,5 @@ fun main() {
     lenguajes = "java y kotlin"
     println(lenguajes)
 }
+
+ */

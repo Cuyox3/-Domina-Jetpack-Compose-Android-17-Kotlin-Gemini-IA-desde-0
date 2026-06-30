@@ -21,6 +21,8 @@ import kotlinx.coroutines.launch
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     newTopic("Funciones")
     basic()
@@ -91,7 +93,7 @@ fun newTopic(topic: String) {
     println("\n$SEPARATOR $topic $SEPARATOR")
 }
 
-
+*/
 
 
 

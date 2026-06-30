@@ -15,6 +15,8 @@ package com.cursosant.kotlinbasics
  * Coupons on my Website:
  * www.alainnicolastello.com
  */
+
+/*
 //Paquetes: snake_case = cursos_ant cursosant
 //Variables y propiedades: camelCase
 val isAdmin = true
@@ -27,6 +29,8 @@ const val MAX_VALUE = 10_000
 //Acortaciones
 val maxNum = 10 // mxNo <- X
 val value = "ANT"// item, thing, a,b,x... <- X
+
+ */
 
 
 

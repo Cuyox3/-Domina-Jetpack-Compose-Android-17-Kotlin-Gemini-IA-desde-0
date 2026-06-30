@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     println("Bucles")
     println("For")
@@ -73,7 +75,7 @@ fun main() {
     println("Cursos ANT")
 }
 
-
+*/
 
 
 

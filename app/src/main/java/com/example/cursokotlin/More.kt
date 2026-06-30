@@ -15,6 +15,9 @@ package com.cursosant.kotlinbasics
  * Coupons on my Website:
  * www.alainnicolastello.com
  */
+
+
+/*
 val global = 4
 const val SEPARATOR: String = "==================="
 
@@ -55,7 +58,7 @@ fun local() {
     println(global)
 }
 
-
+*/
 
 
 

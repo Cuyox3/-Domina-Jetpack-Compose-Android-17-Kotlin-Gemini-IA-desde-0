@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     println("Conversión")
     val b: Int = 5
@@ -57,6 +59,8 @@ fun main() {
     println("Longitúd: $longitud")
     println("Saldo: $saldo")
 }
+
+ */
 
 
 

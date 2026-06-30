@@ -16,6 +16,9 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+
+/*
 fun main() {
     println("Sentencias condicionales:")
     if (false) println("Condición exitosa!")
@@ -70,7 +73,7 @@ fun main() {
         else -> println("Cuenta no encontrada.")
     }
 }
-
+*/
 
 
 

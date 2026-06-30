@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     println("Throw")
     val ex = "Evelyn"
@@ -36,7 +38,7 @@ fun main() {
     }
     println("Kotlin")
 }
-
+*/
 
 
 

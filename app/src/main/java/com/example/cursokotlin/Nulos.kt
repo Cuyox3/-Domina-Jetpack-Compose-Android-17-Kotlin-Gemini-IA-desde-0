@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     println("Nulos en Kotlin:")
     var nombredeusuario: String? = "AlainNT"
@@ -33,3 +35,5 @@ fun main() {
     nombredeusuario = null
     println("Dime: ${nombredeusuario ?: nombrereal}")
 }
+
+ */

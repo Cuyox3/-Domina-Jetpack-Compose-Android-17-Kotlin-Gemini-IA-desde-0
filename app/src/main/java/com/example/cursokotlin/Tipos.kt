@@ -24,6 +24,8 @@ package com.cursosant.kotlinbasics
  * 1 Gb = 1024 Mb
  * 1 Tb = 1024 Gb...
  * */
+
+/*
 fun main() {
     println("Boolean:")
     val soyinstructor: Boolean = true//true = 1, false = 0
@@ -81,8 +83,7 @@ fun main() {
     """//.trimIndent()
     println(lineasmultiples)
 }
-
-
+*/
 
 
 

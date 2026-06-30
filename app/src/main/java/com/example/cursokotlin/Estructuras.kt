@@ -16,6 +16,8 @@ package com.cursosant.kotlinbasics
  * www.alainnicolastello.com
  */
 
+
+/*
 fun main() {
     println("Estructuras de datos")
     val ahorros = Array<Int>(3){100}
@@ -84,10 +86,4 @@ fun main() {
     println(course.substring(17 ,22))
     println(" Curso Kotlin ".trim())
 }
-
-
-
-
-
-
-
+*/
