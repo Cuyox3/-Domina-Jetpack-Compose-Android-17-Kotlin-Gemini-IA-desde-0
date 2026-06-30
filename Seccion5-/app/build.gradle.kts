@@ -6,8 +6,8 @@ plugins {
 android {
     namespace = "com.example.cursokotlin2"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
+        version = release(37) {
+            minorApiLevel = 0
         }
     }
 
@@ -41,6 +41,14 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+
+    // Icons
+    implementation("androidx.compose.material:material-icons-extended:1.7.8")
+    // Glide
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta08")
+    // Constraintlayout
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
+
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
