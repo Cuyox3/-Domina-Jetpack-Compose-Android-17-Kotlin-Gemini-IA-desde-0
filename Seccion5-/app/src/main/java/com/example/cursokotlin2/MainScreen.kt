@@ -9,9 +9,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
@@ -26,10 +31,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.example.cursokotlin2.ui.theme.CommonPaddingDefault
 import com.example.cursokotlin2.ui.theme.CommonPaddingMicro
 import com.example.cursokotlin2.ui.theme.CommonPaddingNano
 import com.example.cursokotlin2.ui.theme.Cursokotlin2Theme
+import com.example.cursokotlin2.ui.theme.Typography
 import com.example.cursokotlin2.ui.theme.imageSize
 
 @Preview(showBackground = true, showSystemUi = true)
@@ -42,27 +49,25 @@ fun MainPreview() {
 
 @Composable
 fun MainView(modifier: Modifier = Modifier) {
+
     Column(modifier = modifier.verticalScroll(rememberScrollState())) {
-        Card(modifier = modifier
+
+        Card( modifier = modifier
             .fillMaxSize()
-            .padding(CommonPaddingDefault)) {
-            CardDefaults()
-        }
-        ElevatedCard(
-            modifier = modifier
-                .fillMaxSize()
-                .padding(CommonPaddingDefault),
-            elevation = CardDefaults.cardElevation(CommonPaddingMicro)
-        ) {
-            CardDefaults()
-        }
+            .padding(CommonPaddingDefault))
+        { CardDefaults() }
+
+        ElevatedCard( modifier = modifier
+            .fillMaxSize()
+            .padding(CommonPaddingDefault),
+            elevation = CardDefaults.cardElevation(CommonPaddingMicro))
+        { CardDefaults() }
+
         OutlinedCard(modifier = modifier
             .fillMaxSize()
             .padding(CommonPaddingDefault),
-            border = BorderStroke(CommonPaddingMicro, MaterialTheme.colorScheme.primary)
-        ) {
-            CardDefaults()
-        }
+            border = BorderStroke(CommonPaddingMicro, MaterialTheme.colorScheme.primary))
+        { CardDefaults() }
     }
 }
 
@@ -75,27 +80,52 @@ fun CardDefaults() {
 
         val (imgCard, txtTitle, txtDescription, btnBuy, btnSkip) = createRefs()
 
-        Image(painter = painterResource(R.drawable.icono_magito),
-                    contentDescription = null,
+        Image(painter = painterResource(R.drawable.icono_magito), contentDescription = null,
             modifier = Modifier
-                .constrainAs(imgCard){
+                .constrainAs(imgCard) {
                     start.linkTo(parent.start)
                     top.linkTo(parent.top)
                 }
                 .size(imageSize)
-                .background(Color.Magenta) )
+                .background(Color.Magenta))
 
         Text(text = stringResource(R.string.tittle_black_friday), modifier = Modifier
             .constrainAs(txtTitle){
-                start.linkTo(parent.end)
-        })
+                start.linkTo(imgCard.end, margin = CommonPaddingDefault)
+                end.linkTo(parent.end)
+                top.linkTo(imgCard.top)
+                width = Dimension. fillToConstraints },
+        style = Typography.headlineSmall
+        )
 
         Text(text = stringResource(R.string.description_black_friday),modifier = Modifier
-            .constrainAs(imgCard){
-                start.linkTo(imgCard.end)
-                top.linkTo(txtDescription.top)    }
+            .constrainAs(txtDescription){
+                start.linkTo(txtTitle.start)
+                end.linkTo(txtTitle.end)
+                top.linkTo(txtTitle.bottom )
+                bottom.linkTo(imgCard.bottom)
+                width = Dimension. fillToConstraints }
             ,maxLines = 3,
-            overflow = TextOverflow.Ellipsis )
+            overflow = TextOverflow.Ellipsis ,
+            style = Typography.bodySmall )
 
+        Button(onClick =  { } , modifier = Modifier.
+        constrainAs(btnBuy) {
+            end.linkTo(parent.end)
+            top.linkTo(txtDescription.bottom, margin =CommonPaddingDefault)
+            bottom.linkTo(parent.bottom)
+        }){
+            Icon(imageVector = Icons.Default.ShoppingCart, contentDescription = null)
+            Text(text = stringResource(R.string.buy))
+        }
+        Button(onClick =  { } , modifier = Modifier.
+        constrainAs(btnSkip) {
+            end.linkTo(btnBuy.start, margin = CommonPaddingDefault)
+            top.linkTo(txtDescription.bottom, margin = CommonPaddingDefault)
+            bottom.linkTo(parent.bottom)
+        }){
+            Icon(imageVector = Icons.Default.SkipNext, contentDescription = null)
+            Text(text = stringResource(R.string.skip))
+        }
     }
 }
