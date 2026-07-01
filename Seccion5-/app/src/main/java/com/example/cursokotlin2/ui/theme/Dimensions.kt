@@ -12,3 +12,5 @@ val CommonPaddingLarge = 32.dp
 val CommonPaddingXLarge= 64.dp
 
 val imageSize = 88.dp
+
+val ImgCoverHeight = 128.dp
